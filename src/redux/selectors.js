@@ -1,7 +1,7 @@
-const getContacts = state => state.contacts.items;
-const getIsLoading = state => state.contacts.isLoading;
-const getError = state => state.contacts.error;
+const selectContacts = state => state.contacts.items;
+const selectIsLoading = state => state.contacts.isLoading;
+const selectError = state => state.contacts.error;
 
-const getFilter = state => state.filter;
+const selectFilter = state => state.filter;
 
-export { getContacts, getFilter, getIsLoading, getError };
+export { selectContacts, selectFilter, selectIsLoading, selectError };
