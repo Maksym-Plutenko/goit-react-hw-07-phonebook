@@ -1,11 +1,12 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { deleteContact } from '../../../redux/contactsSlice';
+// import { deleteContact } from '../../../redux/contactsSlice';
+import { deleteContact } from 'redux/operations';
 
 import css from './Contact.module.css';
 
-const Contact = ({ name, number, id }) => {
+const Contact = ({ name, phone, id }) => {
   const dispatch = useDispatch();
 
   const clickHandler = event => {
@@ -15,7 +16,7 @@ const Contact = ({ name, number, id }) => {
   return (
     <>
       <p>
-        {name}: {number}
+        {name}: {phone}
       </p>
       <button
         type="button"
@@ -31,7 +32,7 @@ const Contact = ({ name, number, id }) => {
 
 Contact.propTypes = {
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
 
